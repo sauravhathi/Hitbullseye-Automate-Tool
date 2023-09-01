@@ -33,8 +33,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 200px;
-    margin-bottom: 20px;
+    min-height: 250px;
 }
 
 .input_group {
