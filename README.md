@@ -1,4 +1,10 @@
-# Hitbullseye Automate Tool
+# <p align="center">Hitbullseye Automate Tool</p>
+
+<p align="center">
+
+  <img src="https://github.com/sauravhathi/Hitbullseye-Automate-Tool/assets/61316762/62a59bfc-7e7d-4858-a69c-e3b4b5247b8f" alt="logo" style="width: 100px">
+
+</p>
 
 Automate your test-taking on [hitbullseye.com](https://www.hitbullseye.com/) with this handy Chrome extension. This tool allows you to answer all the questions in a test with a single click. 
 
@@ -7,6 +13,8 @@ Automate your test-taking on [hitbullseye.com](https://www.hitbullseye.com/) wit
 - **Effortless Test Taking**: Say goodbye to manual question answering. This tool automates the process for you.
 
 - **Customizable Time Interval**: You can set a time interval (in seconds) between each question attempt to suit your preferences.
+
+ <img src="https://github.com/sauravhathi/Hitbullseye-Automate-Tool/assets/61316762/64911ced-64d3-4e49-a9fa-b2e653021dbd" alt="logo" style="width: 40%">
 
 ## Getting Started
 
