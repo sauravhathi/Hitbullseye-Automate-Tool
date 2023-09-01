@@ -1,0 +1,28 @@
+{
+  "name": "Hitbullseye Automation Tool",
+  "version": "2.0.0",
+  "homepage_url": "https://github.com/sauravhathi/Hitbullseye-Automate-Tool",
+  "description": "Attempt all the questions in a test on hitbullseye.com with a single click.",
+  "author": "Saurav Hathi",
+  "manifest_version": 3,
+  "icons": {
+    "16": "./images/icon16.png",
+    "32": "./images/icon32.png",
+    "48": "./images/icon48.png",
+    "128": "./images/icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["scripting", "activeTab"],
+  "action": {
+    "default_popup": "./popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.hitbullseye.com/*"],
+      "css": ["./popup/popup.css"],
+      "js": ["content.js"]
+    }
+  ]
+}
