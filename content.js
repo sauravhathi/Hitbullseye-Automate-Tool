@@ -3,15 +3,22 @@ console.log('👨‍💻 Author: Saurav Hathi \n🌟 GitHub: https://github.com/
 let inter = null;
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-    if (request.message === "start") {
-        if (Object.keys(request.answer_key).length === 0) {
-            toast("Please enter the answer key", "error");
-            return;
-        }
 
-        attempt(request.answer_key, request.time);
-    } else if (request.message === "stop") {
-        stopAttempt();
+    if (window.location.href.includes("hitbullseye_test.php")) {
+        if (request.message === "start") {
+            if (Object.keys(request.answer_key).length === 0) {
+                toast("Please enter the answer key", "error");
+                return;
+            }
+
+
+            attempt(request.answer_key, request.time);
+        } else if (request.message === "stop") {
+            stopAttempt();
+        }
+    }
+    else {
+        toast("Please open the test page", "error");
     }
 });
 
@@ -42,28 +49,4 @@ function stopAttempt() {
         clearInterval(inter);
         toast("Stopped attempting the test");
     }
-}
-
-function toast(message, type = "success") {
-    const div = document.createElement("div");
-    div.id = "toast";
-    const text = document.createTextNode(message);
-    div.appendChild(text);
-    const styleList = [
-        'background-color: ' + (type === 'success' ? '#350054' : '#ff0000'),
-        'color: ' + (type === 'success' ? '#fff' : '#fff'),
-    ];
-    div.style.cssText = styleList.join(";");
-    document.body.appendChild(div);
-    setTimeout(() => {
-        div.style.opacity = "1";
-        div.style.transform = "translateY(0)";
-    }, 1);
-    setTimeout(() => {
-        div.style.opacity = "0";
-        div.style.transform = "translateY(-100%)";
-        setTimeout(() => {
-            document.body.removeChild(div);
-        }, 500);
-    }, 2000);
 }
