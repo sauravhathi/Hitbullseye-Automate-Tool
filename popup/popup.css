@@ -131,3 +131,17 @@ footer span {
 footer span a {
     font-size: 0.8rem;
 }
+
+#toast {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    position: fixed;
+    bottom: 1%;
+    left: 1%;
+    transform: translateY(100%);
+    padding: 1rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    z-index: 9999;
+}
