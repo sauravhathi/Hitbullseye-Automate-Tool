@@ -28,7 +28,7 @@ const attempt = (ans_key, time) => {
     let i = 0;
 
     toast("Started attempting the test");
-    function attemptQuestion() {
+   async function attemptQuestion() {
         document.querySelector(`#${ans[i]}_${i + 1}`).click();
         document.querySelector("#main_div > div.tableWidthPercent > div.onlineTestLeftDiv > div.qnav > span.saveNextButton > a").click();
         i++;
@@ -36,6 +36,7 @@ const attempt = (ans_key, time) => {
         if (i === len) {
             toast("Finished attempting the test");
             clearInterval(inter);
+            await new Promise(r => setTimeout(r, 1000));
             document.querySelector('#activator').click();
             document.querySelector('input[name="rd"][value="Y"]').click();
         }
