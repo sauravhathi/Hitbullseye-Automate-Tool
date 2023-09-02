@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const start = document.getElementById("start");
     const stop = document.getElementById("stop");
     const time = document.getElementById("time");
+    let ans_key = document.getElementById("test_answer_key");
     const time_value = document.getElementById("time_value");
     time_value.innerText = time.value + "s";
 
@@ -10,16 +11,17 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     start.addEventListener("click", function () {
-        const ans_key = document.getElementById("test_answer_key").value.replace(/\s/g, "");
-
-        if (ans_key == "") {
-            alert("Please enter the answer key");
-            return;
-        }
+        let ans_key = document.getElementById("test_answer_key").value;
 
         chTab("start", ans_key, time.value);
         start.disabled = true;
     });
+
+    ans_key.addEventListener("input", function () {
+        ans_key.value = ans_key.value.toUpperCase().replace(/\s/g, "");
+        start.disabled = false;
+    });
+
     stop.addEventListener("click", function () {
         chTab("stop", "", 0);
         start.disabled = true;
