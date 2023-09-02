@@ -22,7 +22,7 @@
     {
       "matches": ["https://*.hitbullseye.com/*"],
       "css": ["./popup/popup.css"],
-      "js": ["content.js"]
+      "js": ["content.js", "getQuestions.js", "toast.js"]
     }
   ]
 }
