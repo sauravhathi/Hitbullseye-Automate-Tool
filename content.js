@@ -31,9 +31,6 @@ const attempt = (ans_key, time) => {
             clearInterval(inter);
             document.querySelector('#activator').click();
             document.querySelector('input[name="rd"][value="Y"]').click();
-            if (confirm("Are you sure you want to submit?")) {
-                document.querySelector('#close_confirmed').click();
-            }
         }
     }
 
