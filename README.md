@@ -20,13 +20,21 @@ Automate your test-taking on [hitbullseye.com](https://www.hitbullseye.com/) wit
 
 1. Clone or download this repository.
 
-2. Install the extension in Chrome.
+3. Open your Google Chrome browser.
 
-3. Visit [hitbullseye.com](https://www.hitbullseye.com/) and log in.
+4. Navigate to `chrome://extensions/`.
 
-4. Open the extension, enter the test answer key, and set the time interval.
+5. Enable the "Developer mode" option in the top right corner.
 
-5. Click "Start" to automate the test-taking process, and "Stop" to halt it.
+6. Click on "Load unpacked" and select the folder where you cloned/downloaded the repository.
+
+7. The extension should now be installed and ready to use.
+
+8. Visit [hitbullseye.com](https://www.hitbullseye.com/) and log in.
+
+9. Open the extension, enter the test answer key, and set the time interval.
+
+10. Click "Start" to automate the test-taking process, and "Stop" to halt it.
 
 ## Support and Contribution
 
