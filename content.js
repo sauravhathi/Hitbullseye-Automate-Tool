@@ -4,7 +4,7 @@ let inter = null;
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 
-    if (window.location.href.includes("hitbullseye_test.php")) {
+    if (window.location.href.includes("onlinetest.hitbullseye.com/online_load")) {
         if (request.message === "start") {
             if (Object.keys(request.answer_key).length === 0) {
                 toast("Please enter the answer key", "error");
