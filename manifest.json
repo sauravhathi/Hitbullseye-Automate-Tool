@@ -1,9 +1,10 @@
 {
-  "name": "Hitbullseye Automation Tool",
+  "name": "Hitbullseye Automate Tool",
   "version": "2.0.0",
   "homepage_url": "https://github.com/sauravhathi/Hitbullseye-Automate-Tool",
   "description": "Attempt all the questions in a test on hitbullseye.com with a single click.",
   "author": "Saurav Hathi",
+  "default_locale": "en",
   "manifest_version": 3,
   "icons": {
     "16": "./images/icon16.png",
