@@ -29,7 +29,7 @@ const attempt = (ans_key, time) => {
 
     toast("Started attempting the test");
    async function attemptQuestion() {
-        document.querySelector(`#${ans[i]}_${i + 1}`).click();
+        document.querySelector(`input[type="radio"][name="radio_${i + 1}"][value="${ans[i].toLowerCase()}"]`).click();
         document.querySelector("#main_div > div.tableWidthPercent > div.onlineTestLeftDiv > div.qnav > span.saveNextButton > a").click();
         i++;
 
